@@ -36,6 +36,7 @@ set(QT_INSTALL_PLUGINS ${QT${QT_VERSION_MAJOR}_INSTALL_PLUGINS})
 # If QT_INSTALL_PREFIX is empty, try to derive it from QT_DIR, cutting off the
 # last three components ("lib/cmake/Qt5") from the path
 if(NOT QT_INSTALL_PREFIX)
+  message(STATUS "Trying to derive QT_INSTALL_PREFIX from QT_DIR: ${QT_DIR}")
   set(QT_INSTALL_PREFIX ${QT_DIR})
   get_filename_component(QT_INSTALL_PREFIX ${QT_INSTALL_PREFIX} DIRECTORY)
   get_filename_component(QT_INSTALL_PREFIX ${QT_INSTALL_PREFIX} DIRECTORY)
